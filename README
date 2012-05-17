@@ -1,0 +1,6 @@
+Gapless MP3 Player
+==================
+
+Gapless MP3 Player for iOS is a music player that can play several mp3 files in a row without a gap between them. This is an alternative for the standard AVAudioPlayer class that is always have a short delay at the beginning.
+
+The player is supposed to work along with OpenAL and to use already activated audio sessions.

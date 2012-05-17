@@ -1,0 +1,280 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B3417B7156563C5003092F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3417B6156563C5003092F2 /* UIKit.framework */; };
+		8B3417B9156563C5003092F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3417B8156563C5003092F2 /* Foundation.framework */; };
+		8B3417BB156563C5003092F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3417BA156563C5003092F2 /* CoreGraphics.framework */; };
+		8B3417C1156563C5003092F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B3417BF156563C5003092F2 /* InfoPlist.strings */; };
+		8B3417C3156563C5003092F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3417C2156563C5003092F2 /* main.m */; };
+		8B3417C7156563C5003092F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3417C6156563C5003092F2 /* AppDelegate.m */; };
+		8B3417CA156563C5003092F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3417C9156563C5003092F2 /* ViewController.m */; };
+		8B3417CD156563C5003092F2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3417CB156563C5003092F2 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B3417B2156563C5003092F2 /* Gapless-MP3-Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gapless-MP3-Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3417B6156563C5003092F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8B3417B8156563C5003092F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8B3417BA156563C5003092F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8B3417BE156563C5003092F2 /* Gapless-MP3-Player-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gapless-MP3-Player-Info.plist"; sourceTree = "<group>"; };
+		8B3417C0156563C5003092F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B3417C2156563C5003092F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B3417C4156563C5003092F2 /* Gapless-MP3-Player-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gapless-MP3-Player-Prefix.pch"; sourceTree = "<group>"; };
+		8B3417C5156563C5003092F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B3417C6156563C5003092F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B3417C8156563C5003092F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8B3417C9156563C5003092F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B3417CC156563C5003092F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B3417AF156563C5003092F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3417B7156563C5003092F2 /* UIKit.framework in Frameworks */,
+				8B3417B9156563C5003092F2 /* Foundation.framework in Frameworks */,
+				8B3417BB156563C5003092F2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B3417A7156563C5003092F2 = {
+			isa = PBXGroup;
+			children = (
+				8B3417BC156563C5003092F2 /* Gapless-MP3-Player */,
+				8B3417B5156563C5003092F2 /* Frameworks */,
+				8B3417B3156563C5003092F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B3417B3156563C5003092F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B3417B2156563C5003092F2 /* Gapless-MP3-Player.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B3417B5156563C5003092F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B3417B6156563C5003092F2 /* UIKit.framework */,
+				8B3417B8156563C5003092F2 /* Foundation.framework */,
+				8B3417BA156563C5003092F2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B3417BC156563C5003092F2 /* Gapless-MP3-Player */ = {
+			isa = PBXGroup;
+			children = (
+				8B3417C5156563C5003092F2 /* AppDelegate.h */,
+				8B3417C6156563C5003092F2 /* AppDelegate.m */,
+				8B3417C8156563C5003092F2 /* ViewController.h */,
+				8B3417C9156563C5003092F2 /* ViewController.m */,
+				8B3417CB156563C5003092F2 /* ViewController.xib */,
+				8B3417BD156563C5003092F2 /* Supporting Files */,
+			);
+			path = "Gapless-MP3-Player";
+			sourceTree = "<group>";
+		};
+		8B3417BD156563C5003092F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B3417BE156563C5003092F2 /* Gapless-MP3-Player-Info.plist */,
+				8B3417BF156563C5003092F2 /* InfoPlist.strings */,
+				8B3417C2156563C5003092F2 /* main.m */,
+				8B3417C4156563C5003092F2 /* Gapless-MP3-Player-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B3417B1156563C5003092F2 /* Gapless-MP3-Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B3417D0156563C5003092F2 /* Build configuration list for PBXNativeTarget "Gapless-MP3-Player" */;
+			buildPhases = (
+				8B3417AE156563C5003092F2 /* Sources */,
+				8B3417AF156563C5003092F2 /* Frameworks */,
+				8B3417B0156563C5003092F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gapless-MP3-Player";
+			productName = "Gapless-MP3-Player";
+			productReference = 8B3417B2156563C5003092F2 /* Gapless-MP3-Player.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B3417A9156563C5003092F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Emotion Rays Entertainment";
+			};
+			buildConfigurationList = 8B3417AC156563C5003092F2 /* Build configuration list for PBXProject "Gapless-MP3-Player" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8B3417A7156563C5003092F2;
+			productRefGroup = 8B3417B3156563C5003092F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B3417B1156563C5003092F2 /* Gapless-MP3-Player */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B3417B0156563C5003092F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3417C1156563C5003092F2 /* InfoPlist.strings in Resources */,
+				8B3417CD156563C5003092F2 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B3417AE156563C5003092F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3417C3156563C5003092F2 /* main.m in Sources */,
+				8B3417C7156563C5003092F2 /* AppDelegate.m in Sources */,
+				8B3417CA156563C5003092F2 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B3417BF156563C5003092F2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B3417C0156563C5003092F2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8B3417CB156563C5003092F2 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B3417CC156563C5003092F2 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B3417CE156563C5003092F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8B3417CF156563C5003092F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B3417D1156563C5003092F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gapless-MP3-Player/Gapless-MP3-Player-Prefix.pch";
+				INFOPLIST_FILE = "Gapless-MP3-Player/Gapless-MP3-Player-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8B3417D2156563C5003092F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gapless-MP3-Player/Gapless-MP3-Player-Prefix.pch";
+				INFOPLIST_FILE = "Gapless-MP3-Player/Gapless-MP3-Player-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B3417AC156563C5003092F2 /* Build configuration list for PBXProject "Gapless-MP3-Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B3417CE156563C5003092F2 /* Debug */,
+				8B3417CF156563C5003092F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B3417D0156563C5003092F2 /* Build configuration list for PBXNativeTarget "Gapless-MP3-Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B3417D1156563C5003092F2 /* Debug */,
+				8B3417D2156563C5003092F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B3417A9156563C5003092F2 /* Project object */;
+}

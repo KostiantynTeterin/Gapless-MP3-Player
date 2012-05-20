@@ -22,11 +22,16 @@
 @interface AudioPlayer : NSObject {
     SoundQueue *soundQueue;
     NSMutableArray *sounds;
-    bool isPause;
+    bool isPaused;
     bool isPlaying;
+    float volume;
 
     AudioQueueRef queue;
 }
+@property (nonatomic, assign) float volume;
+@property (nonatomic, readonly) bool isPaused;
+@property (nonatomic, readonly) bool isPlaying;
+
 // Create queue
 + (AudioPlayer*)defaultPlayer;
 
@@ -51,7 +56,5 @@
 - (void)breakLoop;
 
 // Get player state
-- (bool)isPaused;
-- (bool)isPlaying;
 - (int)currentItemNumber;
 @end

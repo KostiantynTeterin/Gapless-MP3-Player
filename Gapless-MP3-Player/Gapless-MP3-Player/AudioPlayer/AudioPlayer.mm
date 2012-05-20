@@ -9,6 +9,9 @@
 #import "AudioPlayer.h"
 
 @implementation AudioPlayer
+@synthesize isPaused;
+@synthesize isPlaying;
+@synthesize volume;
 
 /////////////////////////////////////////
 //  Create audio player
@@ -33,6 +36,7 @@ static AudioPlayer *sharedAudioPlayer = nil;
     soundQueue->lastItem = nil;
     soundQueue->currentItem = 0;
     queue = nil;
+    volume = 1.0f;
     
     sounds = [[NSMutableArray alloc] init];
     
@@ -169,6 +173,9 @@ static AudioPlayer *sharedAudioPlayer = nil;
         if(currentSoundDescription(soundQueue)->isDone) break;
     }
     
+    // Set audio queue volume
+    AudioQueueSetParameter(queue, kAudioQueueParam_Volume, volume);
+    
     // Play
     CheckError(AudioQueueStart(queue, NULL), "AudioQueueStart failed");
     isPlaying = YES;
@@ -177,6 +184,7 @@ static AudioPlayer *sharedAudioPlayer = nil;
 {
     if(!queue) return;
     CheckError(AudioQueueStop(queue, YES), "AudioQueueStop failed");
+    isPlaying = NO;
     // [self dispose] will be called automatically through the notification from a callback that track the event when audio player is stop playing
 }
 - (void)dispose
@@ -190,13 +198,13 @@ static AudioPlayer *sharedAudioPlayer = nil;
 - (void)pause
 {
     if(!queue) return;
-    isPause = YES;
+    isPaused = YES;
     CheckError(AudioQueuePause(queue), "AudioQueuePause failed");
 }
 - (void)resume
 {
     if(!queue) return;
-    isPause = NO;
+    isPaused = NO;
     CheckError(AudioQueueStart(queue, nil), "AudioQueueStart (resume) failed");
 }
 
@@ -206,15 +214,16 @@ static AudioPlayer *sharedAudioPlayer = nil;
     currentQueueItem(soundQueue)->breakEndlessLoop = YES;
 }
 
+- (void)setVolume:(float)vol
+{
+    self.volume = MAX(0, MIN(vol, 1));;
+    if(isPlaying)
+    {
+        AudioQueueSetParameter(queue, kAudioQueueParam_Volume, vol);
+    }
+}
+
 // Get player state
-- (bool)isPaused
-{
-    return isPause;
-}
-- (bool)isPlaying
-{
-    return isPlaying;
-}
 - (int)currentItemNumber
 {
     return isPlaying?soundQueue->currentItemNumber:-1;

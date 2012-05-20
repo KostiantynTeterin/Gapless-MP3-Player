@@ -1,6 +1,24 @@
 Gapless MP3 Player
 ==================
 
-Gapless MP3 Player for iOS is a music player that can play several mp3 files in a row without a gap between them. This is an alternative for the standard AVAudioPlayer class that is always have a short delay at the beginning.
+Gapless MP3 Player for iOS is an audio player that play several music (mp3 or other supported formats) files in a row
+without a gap between them. The musicfiles must be created using the following technology:
+
+http://www.compuphase.com/mp3/mp3loops.htm
+
+All loops should be encoded using the same parameter in order to be played with this player.
 
 The player is supposed to work along with OpenAL and to use already activated audio sessions.
+
+
+Important license information
+=============================
+
+You can use the player in any kind of projects (free or commercial) without any limitations. 
+
+IMPORTANT: The music used as the demo of the technology is copyrighted and is not supposed to be re-used. It was written
+exclusively for the upcoming iPhone/iPad game Fix The Leaks:
+
+https://www.facebook.com/pages/Fix-The-Leaks/237415792963282
+
+By Dan Reynolds (http://www.musicianeer.com)

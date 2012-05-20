@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AudioPlayer.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController {
+    AudioSound *mus1, *mus2;
+    UIButton IBOutlet *playButton;
+    UIButton IBOutlet *pauseButton;
+    
+    UILabel IBOutlet *track1, *track2, *track3;
+}
+- (IBAction)buttonPlayTap:(id)sender;
+- (IBAction)buttonPauseTap:(id)sender;
+- (IBAction)buttonBreakLoopTap:(id)sender;
 @end

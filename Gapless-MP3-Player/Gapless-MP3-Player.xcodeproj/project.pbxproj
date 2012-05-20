@@ -15,6 +15,12 @@
 		8B3417C7156563C5003092F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3417C6156563C5003092F2 /* AppDelegate.m */; };
 		8B3417CA156563C5003092F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3417C9156563C5003092F2 /* ViewController.m */; };
 		8B3417CD156563C5003092F2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3417CB156563C5003092F2 /* ViewController.xib */; };
+		AC3F933A1565FB8F005741C5 /* AudioSound.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3F93391565FB8F005741C5 /* AudioSound.m */; };
+		AC65ADEC15688E5B00A4C60A /* mus_main_title_01_lp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADE915688E5B00A4C60A /* mus_main_title_01_lp.mp3 */; };
+		AC65ADED15688E5B00A4C60A /* mus_main_title_02_nl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADEA15688E5B00A4C60A /* mus_main_title_02_nl.mp3 */; };
+		AC65ADEE15688E5B00A4C60A /* mus_main_title_03_lp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADEB15688E5B00A4C60A /* mus_main_title_03_lp.mp3 */; };
+		AC8DA4371567374500AA0A14 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8DA4361567374500AA0A14 /* AudioToolbox.framework */; };
+		ACE3759815658DB90078A53C /* AudioPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACE3759715658DB90078A53C /* AudioPlayer.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,17 @@
 		8B3417C8156563C5003092F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8B3417C9156563C5003092F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8B3417CC156563C5003092F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AC3F93381565FB8F005741C5 /* AudioSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSound.h; sourceTree = "<group>"; };
+		AC3F93391565FB8F005741C5 /* AudioSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSound.m; sourceTree = "<group>"; };
+		AC53F58C1567344A005C1019 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		AC65ADE915688E5B00A4C60A /* mus_main_title_01_lp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mus_main_title_01_lp.mp3; path = "Demo music/mus_main_title_01_lp.mp3"; sourceTree = SOURCE_ROOT; };
+		AC65ADEA15688E5B00A4C60A /* mus_main_title_02_nl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mus_main_title_02_nl.mp3; path = "Demo music/mus_main_title_02_nl.mp3"; sourceTree = SOURCE_ROOT; };
+		AC65ADEB15688E5B00A4C60A /* mus_main_title_03_lp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mus_main_title_03_lp.mp3; path = "Demo music/mus_main_title_03_lp.mp3"; sourceTree = SOURCE_ROOT; };
+		AC8DA4361567374500AA0A14 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		ACE3759615658DB90078A53C /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayer.h; path = AudioPlayer/AudioPlayer.h; sourceTree = "<group>"; };
+		ACE3759715658DB90078A53C /* AudioPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AudioPlayer.mm; path = AudioPlayer/AudioPlayer.mm; sourceTree = "<group>"; };
+		ACE375991565D5380078A53C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		ACE375A01565F4510078A53C /* AudioPlayerUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerUtilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8DA4371567374500AA0A14 /* AudioToolbox.framework in Frameworks */,
 				8B3417B7156563C5003092F2 /* UIKit.framework in Frameworks */,
 				8B3417B9156563C5003092F2 /* Foundation.framework in Frameworks */,
 				8B3417BB156563C5003092F2 /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +68,7 @@
 		8B3417A7156563C5003092F2 = {
 			isa = PBXGroup;
 			children = (
+				AC8DA4361567374500AA0A14 /* AudioToolbox.framework */,
 				8B3417BC156563C5003092F2 /* Gapless-MP3-Player */,
 				8B3417B5156563C5003092F2 /* Frameworks */,
 				8B3417B3156563C5003092F2 /* Products */,
@@ -67,6 +86,8 @@
 		8B3417B5156563C5003092F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC53F58C1567344A005C1019 /* AudioUnit.framework */,
+				ACE375991565D5380078A53C /* CoreFoundation.framework */,
 				8B3417B6156563C5003092F2 /* UIKit.framework */,
 				8B3417B8156563C5003092F2 /* Foundation.framework */,
 				8B3417BA156563C5003092F2 /* CoreGraphics.framework */,
@@ -77,6 +98,8 @@
 		8B3417BC156563C5003092F2 /* Gapless-MP3-Player */ = {
 			isa = PBXGroup;
 			children = (
+				ACE3759B1565E5720078A53C /* Demo music */,
+				ACE3759515658D910078A53C /* Audio Player */,
 				8B3417C5156563C5003092F2 /* AppDelegate.h */,
 				8B3417C6156563C5003092F2 /* AppDelegate.m */,
 				8B3417C8156563C5003092F2 /* ViewController.h */,
@@ -96,6 +119,28 @@
 				8B3417C4156563C5003092F2 /* Gapless-MP3-Player-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACE3759515658D910078A53C /* Audio Player */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3759615658DB90078A53C /* AudioPlayer.h */,
+				ACE3759715658DB90078A53C /* AudioPlayer.mm */,
+				ACE375A01565F4510078A53C /* AudioPlayerUtilities.h */,
+				AC3F93381565FB8F005741C5 /* AudioSound.h */,
+				AC3F93391565FB8F005741C5 /* AudioSound.m */,
+			);
+			name = "Audio Player";
+			sourceTree = "<group>";
+		};
+		ACE3759B1565E5720078A53C /* Demo music */ = {
+			isa = PBXGroup;
+			children = (
+				AC65ADE915688E5B00A4C60A /* mus_main_title_01_lp.mp3 */,
+				AC65ADEA15688E5B00A4C60A /* mus_main_title_02_nl.mp3 */,
+				AC65ADEB15688E5B00A4C60A /* mus_main_title_03_lp.mp3 */,
+			);
+			name = "Demo music";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +169,7 @@
 		8B3417A9156563C5003092F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Emotion Rays Entertainment";
 			};
 			buildConfigurationList = 8B3417AC156563C5003092F2 /* Build configuration list for PBXProject "Gapless-MP3-Player" */;
@@ -151,6 +196,9 @@
 			files = (
 				8B3417C1156563C5003092F2 /* InfoPlist.strings in Resources */,
 				8B3417CD156563C5003092F2 /* ViewController.xib in Resources */,
+				AC65ADEC15688E5B00A4C60A /* mus_main_title_01_lp.mp3 in Resources */,
+				AC65ADED15688E5B00A4C60A /* mus_main_title_02_nl.mp3 in Resources */,
+				AC65ADEE15688E5B00A4C60A /* mus_main_title_03_lp.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +212,8 @@
 				8B3417C3156563C5003092F2 /* main.m in Sources */,
 				8B3417C7156563C5003092F2 /* AppDelegate.m in Sources */,
 				8B3417CA156563C5003092F2 /* ViewController.m in Sources */,
+				ACE3759815658DB90078A53C /* AudioPlayer.mm in Sources */,
+				AC3F933A1565FB8F005741C5 /* AudioSound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +243,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -204,11 +257,12 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -217,15 +271,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -235,9 +293,15 @@
 		8B3417D1156563C5003092F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gapless-MP3-Player/Gapless-MP3-Player-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Gapless-MP3-Player/Gapless-MP3-Player-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -246,9 +310,15 @@
 		8B3417D2156563C5003092F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gapless-MP3-Player/Gapless-MP3-Player-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Gapless-MP3-Player/Gapless-MP3-Player-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -273,6 +343,7 @@
 				8B3417D2156563C5003092F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

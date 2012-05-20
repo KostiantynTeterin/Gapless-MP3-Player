@@ -15,7 +15,6 @@
 		8B3417C7156563C5003092F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3417C6156563C5003092F2 /* AppDelegate.m */; };
 		8B3417CA156563C5003092F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3417C9156563C5003092F2 /* ViewController.m */; };
 		8B3417CD156563C5003092F2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3417CB156563C5003092F2 /* ViewController.xib */; };
-		AC3F933A1565FB8F005741C5 /* AudioSound.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3F93391565FB8F005741C5 /* AudioSound.m */; };
 		AC65ADEC15688E5B00A4C60A /* mus_main_title_01_lp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADE915688E5B00A4C60A /* mus_main_title_01_lp.mp3 */; };
 		AC65ADED15688E5B00A4C60A /* mus_main_title_02_nl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADEA15688E5B00A4C60A /* mus_main_title_02_nl.mp3 */; };
 		AC65ADEE15688E5B00A4C60A /* mus_main_title_03_lp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADEB15688E5B00A4C60A /* mus_main_title_03_lp.mp3 */; };
@@ -38,8 +37,6 @@
 		8B3417C8156563C5003092F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8B3417C9156563C5003092F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8B3417CC156563C5003092F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		AC3F93381565FB8F005741C5 /* AudioSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSound.h; sourceTree = "<group>"; };
-		AC3F93391565FB8F005741C5 /* AudioSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSound.m; sourceTree = "<group>"; };
 		AC53F58C1567344A005C1019 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		AC65ADE915688E5B00A4C60A /* mus_main_title_01_lp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mus_main_title_01_lp.mp3; path = "Demo music/mus_main_title_01_lp.mp3"; sourceTree = SOURCE_ROOT; };
 		AC65ADEA15688E5B00A4C60A /* mus_main_title_02_nl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mus_main_title_02_nl.mp3; path = "Demo music/mus_main_title_02_nl.mp3"; sourceTree = SOURCE_ROOT; };
@@ -51,7 +48,6 @@
 		ACE3759615658DB90078A53C /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayer.h; path = AudioPlayer/AudioPlayer.h; sourceTree = "<group>"; };
 		ACE3759715658DB90078A53C /* AudioPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AudioPlayer.mm; path = AudioPlayer/AudioPlayer.mm; sourceTree = "<group>"; };
 		ACE375991565D5380078A53C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		ACE375A01565F4510078A53C /* AudioPlayerUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerUtilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +129,6 @@
 				AC65ADF515689BF700A4C60A /* AudioSound.m */,
 				ACE3759615658DB90078A53C /* AudioPlayer.h */,
 				ACE3759715658DB90078A53C /* AudioPlayer.mm */,
-				ACE375A01565F4510078A53C /* AudioPlayerUtilities.h */,
-				AC3F93381565FB8F005741C5 /* AudioSound.h */,
-				AC3F93391565FB8F005741C5 /* AudioSound.m */,
 			);
 			name = "Audio Player";
 			sourceTree = "<group>";
@@ -220,7 +213,6 @@
 				8B3417C7156563C5003092F2 /* AppDelegate.m in Sources */,
 				8B3417CA156563C5003092F2 /* ViewController.m in Sources */,
 				ACE3759815658DB90078A53C /* AudioPlayer.mm in Sources */,
-				AC3F933A1565FB8F005741C5 /* AudioSound.m in Sources */,
 				AC65ADF615689BF700A4C60A /* AudioSound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

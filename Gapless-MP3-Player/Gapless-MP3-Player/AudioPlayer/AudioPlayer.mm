@@ -10,7 +10,6 @@
 
 @implementation AudioPlayer
 @synthesize isPaused;
-@synthesize isPlaying;
 @synthesize volume;
 
 /////////////////////////////////////////
@@ -20,10 +19,11 @@ static AudioPlayer *sharedAudioPlayer = nil;
 
 + (AudioPlayer *)defaultPlayer
 {
-    if(sharedAudioPlayer == nil)
-    {
+    if(sharedAudioPlayer != nil) return sharedAudioPlayer;
+    static dispatch_once_t pred;
+    dispatch_once(&pred, ^{
         sharedAudioPlayer = [[AudioPlayer alloc] init];
-    }
+    });
     return sharedAudioPlayer;
 }
 
@@ -35,12 +35,14 @@ static AudioPlayer *sharedAudioPlayer = nil;
     soundQueue->firstItem = nil;
     soundQueue->lastItem = nil;
     soundQueue->currentItem = 0;
+    soundQueue->object = self;
+    soundQueue->isPlaying = NO;
     queue = nil;
     volume = 1.0f;
     
     sounds = [[NSMutableArray alloc] init];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dispose) name:APEVENT_QUEUE_DONE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stop) name:APEVENT_QUEUE_DONE object:self];
     return self;
 }
 - (void)dealloc
@@ -157,7 +159,7 @@ static AudioPlayer *sharedAudioPlayer = nil;
     CheckError(AudioQueueNewOutput(ethalonDesc, AQOutputCallback, soundQueue, NULL, NULL, 0, &queue), "AudioQueueNewOutput failed");
     
     // Add the callback that will determine when sound playing stop
-    CheckError(AudioQueueAddPropertyListener(queue, kAudioQueueProperty_IsRunning, AQPropertyListenerProc, nil), "AudioQueueAddPropertyListener failed");
+    CheckError(AudioQueueAddPropertyListener(queue, kAudioQueueProperty_IsRunning, AQPropertyListenerProc, soundQueue), "AudioQueueAddPropertyListener failed");
     
     
     // Copy magic cookie from file (it is providing a valuable information for the decoder)
@@ -178,21 +180,28 @@ static AudioPlayer *sharedAudioPlayer = nil;
     
     // Play
     CheckError(AudioQueueStart(queue, NULL), "AudioQueueStart failed");
-    isPlaying = YES;
+    soundQueue->isPlaying = YES;
 }
 - (void)stop
 {
-    if(!queue) return;
-    CheckError(AudioQueueStop(queue, YES), "AudioQueueStop failed");
-    isPlaying = NO;
-    // [self dispose] will be called automatically through the notification from a callback that track the event when audio player is stop playing
-}
-- (void)dispose
-{
-    if(!queue) return;
-    CheckError(AudioQueueDispose(queue, YES), "AudioQueueDispose failed");
-    queue = nil;
-    isPlaying = NO;
+    NSLock *lock = [[NSLock alloc] init];
+    if([lock tryLock])
+    {
+        if(queue == nil) return;
+
+        NSLog(@"stop");
+        if(soundQueue->isPlaying)
+        {
+            soundQueue->isPlaying = NO;
+            CheckError(AudioQueueStop(queue, YES), "AudioQueueStop failed");
+        }
+
+        NSLog(@"dispose");
+        CheckError(AudioQueueDispose(queue, YES), "AudioQueueDispose failed");
+        queue = nil;
+        [lock unlock];
+    }
+    [lock release];
 }
 
 - (void)pause
@@ -216,8 +225,8 @@ static AudioPlayer *sharedAudioPlayer = nil;
 
 - (void)setVolume:(float)vol
 {
-    self.volume = MAX(0, MIN(vol, 1));;
-    if(isPlaying)
+    volume = MAX(0, MIN(vol, 1));;
+    if(soundQueue->isPlaying)
     {
         AudioQueueSetParameter(queue, kAudioQueueParam_Volume, vol);
     }
@@ -226,7 +235,11 @@ static AudioPlayer *sharedAudioPlayer = nil;
 // Get player state
 - (int)currentItemNumber
 {
-    return isPlaying?soundQueue->currentItemNumber:-1;
+    return soundQueue->isPlaying?soundQueue->currentItemNumber:-1;
+}
+- (bool)isPlaying
+{
+    return soundQueue->isPlaying;
 }
 
 @end

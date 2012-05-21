@@ -23,14 +23,12 @@
     SoundQueue *soundQueue;
     NSMutableArray *sounds;
     bool isPaused;
-    bool isPlaying;
     float volume;
 
     AudioQueueRef queue;
 }
 @property (nonatomic, assign) float volume;
 @property (nonatomic, readonly) bool isPaused;
-@property (nonatomic, readonly) bool isPlaying;
 
 // Create queue
 + (AudioPlayer*)defaultPlayer;
@@ -57,4 +55,5 @@
 
 // Get player state
 - (int)currentItemNumber;
+- (bool)isPlaying;
 @end

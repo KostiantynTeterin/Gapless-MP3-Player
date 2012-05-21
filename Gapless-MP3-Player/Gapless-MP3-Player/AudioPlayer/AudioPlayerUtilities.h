@@ -39,6 +39,8 @@ typedef struct SoundQueue {
     SoundQueueItem *lastItem;
     SoundQueueItem *currentItem;
     int currentItemNumber;
+    NSObject *object;
+    bool isPlaying;
 } SoundQueue;
 
 
@@ -124,7 +126,12 @@ static void AQPropertyListenerProc (void *inUserData, AudioQueueRef inAQ, AudioQ
     if(value == 0)
     {
         // This event should be catched by audio player to dispose the audio queue
-        [[NSNotificationCenter defaultCenter] postNotificationName:APEVENT_QUEUE_DONE object:nil];
+        SoundQueue *queue = (SoundQueue*)inUserData;
+        if(queue->isPlaying)
+        {
+            queue->isPlaying = NO;
+            [[NSNotificationCenter defaultCenter] postNotificationName:APEVENT_QUEUE_DONE object:queue->object];
+        }
     }
 }
 
@@ -174,7 +181,7 @@ static void AQOutputCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuf
                 // Fill the buffers with the data of the next sound
                 AQOutputCallback(inUserData, inAQ, inCompleteAQBuffer);
                 ++queue->currentItemNumber;
-                [[NSNotificationCenter defaultCenter] postNotificationName:APEVENT_MOVING_TO_NEXT_SOUND object:nil];
+                [[NSNotificationCenter defaultCenter] postNotificationName:APEVENT_MOVING_TO_NEXT_SOUND object:queue->object];
             }
             else 
             {

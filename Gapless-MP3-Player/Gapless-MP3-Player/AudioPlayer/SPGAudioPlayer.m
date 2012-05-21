@@ -15,10 +15,10 @@
 - (id)init
 {
     [super init];
-    player = [AudioPlayer defaultPlayer];
+    player = [[AudioPlayer alloc] init];
     volume = 1;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAudioPlayerDone) name:APEVENT_QUEUE_DONE object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAudioPlayerNextFragment) name:APEVENT_QUEUE_DONE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAudioPlayerDone) name:APEVENT_QUEUE_DONE object:player];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAudioPlayerNextFragment) name:APEVENT_MOVING_TO_NEXT_SOUND object:player];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onInterruptionBegan) name:SP_NOTIFICATION_AUDIO_INTERRUPTION_BEGAN object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onInterruptionEnd) name:SP_NOTIFICATION_AUDIO_INTERRUPTION_ENDED object:nil];
@@ -29,6 +29,7 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [player release];
     [super dealloc];
 }
 
@@ -79,11 +80,15 @@
 // Events
 - (void)onAudioPlayerDone
 {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     [self dispatchEvent:[SPEvent eventWithType:SP_EVENT_GAUDIO_DONE]];
+    [pool drain];
 }
 - (void)onAudioPlayerNextFragment
 {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     [self dispatchEvent:[SPEvent eventWithType:SP_EVENT_GAUDIO_NEXT_SOUND]];
+    [pool drain];
 }
 - (void)onMasterVolumeChanged
 {
@@ -102,6 +107,11 @@
     NSLog(@"Volume set");
     self.volume = vol;
     [player setVolume: vol * [SPAudioEngine masterVolume]];
+}
+- (bool)isPlaying
+{
+    NSLog(@"Is playing: %@", [player isPlaying]?@"yes":@"no");
+    return [player isPlaying];
 }
 
 @end

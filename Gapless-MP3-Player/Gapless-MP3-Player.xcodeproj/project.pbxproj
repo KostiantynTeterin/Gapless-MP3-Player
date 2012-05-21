@@ -19,6 +19,7 @@
 		AC65ADED15688E5B00A4C60A /* mus_main_title_02_nl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADEA15688E5B00A4C60A /* mus_main_title_02_nl.mp3 */; };
 		AC65ADEE15688E5B00A4C60A /* mus_main_title_03_lp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADEB15688E5B00A4C60A /* mus_main_title_03_lp.mp3 */; };
 		AC65ADF615689BF700A4C60A /* AudioSound.m in Sources */ = {isa = PBXBuildFile; fileRef = AC65ADF515689BF700A4C60A /* AudioSound.m */; };
+		AC65AE181569025B00A4C60A /* SPGAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC65AE171569025B00A4C60A /* SPGAudioPlayer.m */; };
 		AC8DA4371567374500AA0A14 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8DA4361567374500AA0A14 /* AudioToolbox.framework */; };
 		ACE3759815658DB90078A53C /* AudioPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACE3759715658DB90078A53C /* AudioPlayer.mm */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,8 @@
 		AC65ADF315689BF700A4C60A /* AudioPlayerUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayerUtilities.h; path = AudioPlayer/AudioPlayerUtilities.h; sourceTree = "<group>"; };
 		AC65ADF415689BF700A4C60A /* AudioSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioSound.h; path = AudioPlayer/AudioSound.h; sourceTree = "<group>"; };
 		AC65ADF515689BF700A4C60A /* AudioSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioSound.m; path = AudioPlayer/AudioSound.m; sourceTree = "<group>"; };
+		AC65AE161569025B00A4C60A /* SPGAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPGAudioPlayer.h; path = AudioPlayer/SPGAudioPlayer.h; sourceTree = "<group>"; };
+		AC65AE171569025B00A4C60A /* SPGAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPGAudioPlayer.m; path = AudioPlayer/SPGAudioPlayer.m; sourceTree = "<group>"; };
 		AC8DA4361567374500AA0A14 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		ACE3759615658DB90078A53C /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayer.h; path = AudioPlayer/AudioPlayer.h; sourceTree = "<group>"; };
 		ACE3759715658DB90078A53C /* AudioPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AudioPlayer.mm; path = AudioPlayer/AudioPlayer.mm; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 		ACE3759515658D910078A53C /* Audio Player */ = {
 			isa = PBXGroup;
 			children = (
+				AC65AE161569025B00A4C60A /* SPGAudioPlayer.h */,
+				AC65AE171569025B00A4C60A /* SPGAudioPlayer.m */,
 				AC65ADF315689BF700A4C60A /* AudioPlayerUtilities.h */,
 				AC65ADF415689BF700A4C60A /* AudioSound.h */,
 				AC65ADF515689BF700A4C60A /* AudioSound.m */,
@@ -214,6 +219,7 @@
 				8B3417CA156563C5003092F2 /* ViewController.m in Sources */,
 				ACE3759815658DB90078A53C /* AudioPlayer.mm in Sources */,
 				AC65ADF615689BF700A4C60A /* AudioSound.m in Sources */,
+				AC65AE181569025B00A4C60A /* SPGAudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

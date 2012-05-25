@@ -127,18 +127,14 @@ static void AQPropertyListenerProc (void *inUserData, AudioQueueRef inAQ, AudioQ
     {
         // This event should be catched by audio player to dispose the audio queue
         SoundQueue *queue = (SoundQueue*)inUserData;
-        if(queue->isPlaying)
-        {
-            queue->isPlaying = NO;
-            [[NSNotificationCenter defaultCenter] postNotificationName:APEVENT_QUEUE_DONE object:queue->object];
-        }
+        queue->isPlaying = NO;
+        [[NSNotificationCenter defaultCenter] postNotificationName:APEVENT_QUEUE_DONE object:queue->object];
     }
 }
 
 // Callback that read the data to buffers and enqueue them to be played
 static void AQOutputCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inCompleteAQBuffer)
 {
-    // inUserData = SoundQueue object
     SoundDescription *sound = currentSoundDescription((SoundQueue*)inUserData);
     if(sound->isDone) return;
     

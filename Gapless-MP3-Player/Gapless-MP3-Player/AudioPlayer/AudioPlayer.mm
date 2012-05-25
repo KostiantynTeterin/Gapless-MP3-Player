@@ -42,7 +42,6 @@ static AudioPlayer *sharedAudioPlayer = nil;
     
     sounds = [[NSMutableArray alloc] init];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stop) name:APEVENT_QUEUE_DONE object:self];
     return self;
 }
 - (void)dealloc
@@ -115,6 +114,8 @@ static AudioPlayer *sharedAudioPlayer = nil;
     if(queue != nil) return; // Another queue is already playing
     if(soundQueue->firstItem == nil) return; // No sounds in the queue
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stop) name:APEVENT_QUEUE_DONE object:self];
+
     soundQueue->currentItem = soundQueue->firstItem;
     soundQueue->currentItemNumber = 0;
     
@@ -141,7 +142,6 @@ static AudioPlayer *sharedAudioPlayer = nil;
         ++n;
         item = item->nextItem;
     }
-    NSLog(@"All sounds have the same format. Let's play'em");
     
     // Prepare to play
 
@@ -189,14 +189,14 @@ static AudioPlayer *sharedAudioPlayer = nil;
     {
         if(queue == nil) return;
 
-        NSLog(@"stop");
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:APEVENT_QUEUE_DONE object:self];
         if(soundQueue->isPlaying)
         {
             soundQueue->isPlaying = NO;
             CheckError(AudioQueueStop(queue, YES), "AudioQueueStop failed");
         }
 
-        NSLog(@"dispose");
         CheckError(AudioQueueDispose(queue, YES), "AudioQueueDispose failed");
         queue = nil;
         [lock unlock];

@@ -19,7 +19,6 @@
 		AC65ADED15688E5B00A4C60A /* mus_main_title_02_nl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADEA15688E5B00A4C60A /* mus_main_title_02_nl.mp3 */; };
 		AC65ADEE15688E5B00A4C60A /* mus_main_title_03_lp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC65ADEB15688E5B00A4C60A /* mus_main_title_03_lp.mp3 */; };
 		AC65ADF615689BF700A4C60A /* AudioSound.m in Sources */ = {isa = PBXBuildFile; fileRef = AC65ADF515689BF700A4C60A /* AudioSound.m */; };
-		AC65AE181569025B00A4C60A /* SPGAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC65AE171569025B00A4C60A /* SPGAudioPlayer.m */; };
 		AC8DA4371567374500AA0A14 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8DA4361567374500AA0A14 /* AudioToolbox.framework */; };
 		ACE3759815658DB90078A53C /* AudioPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACE3759715658DB90078A53C /* AudioPlayer.mm */; };
 /* End PBXBuildFile section */
@@ -219,7 +218,6 @@
 				8B3417CA156563C5003092F2 /* ViewController.m in Sources */,
 				ACE3759815658DB90078A53C /* AudioPlayer.mm in Sources */,
 				AC65ADF615689BF700A4C60A /* AudioSound.m in Sources */,
-				AC65AE181569025B00A4C60A /* SPGAudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

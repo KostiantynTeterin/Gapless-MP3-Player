@@ -104,13 +104,13 @@
 }
 - (void)setVolume:(float)vol
 {
-    NSLog(@"Volume set");
-    self.volume = vol;
+//    NSLog(@"Volume set");
+    volume = vol;
     [player setVolume: vol * [SPAudioEngine masterVolume]];
 }
 - (bool)isPlaying
 {
-    NSLog(@"Is playing: %@", [player isPlaying]?@"yes":@"no");
+//    NSLog(@"Is playing: %@", [player isPlaying]?@"yes":@"no");
     return [player isPlaying];
 }
 

@@ -102,16 +102,33 @@
 {
     [player resume];
 }
+
+// Volume control
 - (void)setVolume:(float)vol
 {
-//    NSLog(@"Volume set");
     volume = vol;
     [player setVolume: vol * [SPAudioEngine masterVolume]];
 }
 - (bool)isPlaying
 {
-//    NSLog(@"Is playing: %@", [player isPlaying]?@"yes":@"no");
     return [player isPlaying];
+}
+- (void)fadeFrom:(float)s_vol to:(float)e_vol duration:(float)seconds
+{
+    [player fadeFrom:s_vol to:e_vol duration:seconds];
+}
+- (void)fadeTo:(float)e_vol duration:(float)seconds
+{
+    [player fadeTo:e_vol duration:seconds];
+}
+
+-(void)setMasterVolume:(float)_volume
+{
+    [player setMasterVolume:_volume];
+}
+-(float)getMasterVolume
+{
+    return [player getMasterVolume];
 }
 
 @end

@@ -26,6 +26,12 @@
     float volume;
 
     AudioQueueRef queue;
+
+    // Fade parameters
+    NSTimer *mFadeTimer;
+    float mFadeSVol, mFadeEVol, mFadeSeconds;
+    NSTimeInterval mTimestamp;
+    float mMasterVolume;
 }
 @property (nonatomic, assign) float volume;
 @property (nonatomic, readonly) bool isPaused;
@@ -56,4 +62,11 @@
 // Get player state
 - (int)currentItemNumber;
 - (bool)isPlaying;
+
+// Change sound volume over time
+- (void)fadeFrom:(float)s_vol to:(float)e_vol duration:(float)seconds;
+- (void)fadeTo:(float)e_vol duration:(float)seconds;
+
+- (void)setMasterVolume:(float)_volume;
+- (float)getMasterVolume;
 @end

@@ -34,4 +34,12 @@
 - (void)breakLoop;
 
 - (bool)isPlaying;
+
+// Change volume over time
+- (void)fadeFrom:(float)s_vol to:(float)e_vol duration:(float)seconds;
+- (void)fadeTo:(float)e_vol duration:(float)seconds;
+
+-(void)setMasterVolume:(float)_volume;
+-(float)getMasterVolume;
+
 @end

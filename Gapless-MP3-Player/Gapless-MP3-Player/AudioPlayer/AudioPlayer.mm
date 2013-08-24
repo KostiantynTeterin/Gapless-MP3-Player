@@ -39,13 +39,19 @@ static AudioPlayer *sharedAudioPlayer = nil;
     soundQueue->isPlaying = NO;
     queue = nil;
     volume = 1.0f;
+    mMasterVolume = 1.0f;
     
     sounds = [[NSMutableArray alloc] init];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stop) name:APEVENT_QUEUE_DONE object:self];
     return self;
 }
 - (void)dealloc
 {
+    if(mFadeTimer)
+    {
+        [mFadeTimer invalidate];
+    }
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self clearQueue];
     [sounds release];
@@ -114,8 +120,12 @@ static AudioPlayer *sharedAudioPlayer = nil;
     if(queue != nil) return; // Another queue is already playing
     if(soundQueue->firstItem == nil) return; // No sounds in the queue
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stop) name:APEVENT_QUEUE_DONE object:self];
-
+    if(mFadeTimer)
+    {
+        [mFadeTimer invalidate];
+        mFadeTimer = nil;
+    }
+    
     soundQueue->currentItem = soundQueue->firstItem;
     soundQueue->currentItemNumber = 0;
     
@@ -176,7 +186,7 @@ static AudioPlayer *sharedAudioPlayer = nil;
     }
     
     // Set audio queue volume
-    AudioQueueSetParameter(queue, kAudioQueueParam_Volume, volume);
+    AudioQueueSetParameter(queue, kAudioQueueParam_Volume, mMasterVolume*volume);
     
     // Play
     CheckError(AudioQueueStart(queue, NULL), "AudioQueueStart failed");
@@ -189,12 +199,15 @@ static AudioPlayer *sharedAudioPlayer = nil;
     {
         if(queue == nil) return;
 
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
-        [[NSNotificationCenter defaultCenter] postNotificationName:APEVENT_QUEUE_DONE object:self];
         if(soundQueue->isPlaying)
         {
             soundQueue->isPlaying = NO;
             CheckError(AudioQueueStop(queue, YES), "AudioQueueStop failed");
+        }
+        if(mFadeTimer)
+        {
+            [mFadeTimer invalidate];
+            mFadeTimer = nil;
         }
 
         CheckError(AudioQueueDispose(queue, YES), "AudioQueueDispose failed");
@@ -225,10 +238,10 @@ static AudioPlayer *sharedAudioPlayer = nil;
 
 - (void)setVolume:(float)vol
 {
-    volume = MAX(0, MIN(vol, 1));;
+    volume = MAX(0, MIN(vol, 1));
     if(soundQueue->isPlaying)
     {
-        AudioQueueSetParameter(queue, kAudioQueueParam_Volume, vol);
+        AudioQueueSetParameter(queue, kAudioQueueParam_Volume, mMasterVolume * volume);
     }
 }
 
@@ -240,6 +253,45 @@ static AudioPlayer *sharedAudioPlayer = nil;
 - (bool)isPlaying
 {
     return soundQueue->isPlaying;
+}
+- (void)fadeTo:(float)e_vol duration:(float)seconds
+{
+    [self fadeFrom:volume to:e_vol duration:seconds];
+}
+- (void)fadeFrom:(float)s_vol to:(float)e_vol duration:(float)seconds
+{
+    mFadeSVol = s_vol;
+    mFadeEVol = e_vol;
+    mFadeSeconds = seconds;
+    if(mFadeTimer)
+    {
+        [mFadeTimer invalidate];
+        mFadeTimer = nil;
+    }
+    mFadeTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(onFadeTimer:) userInfo:nil repeats:YES];
+    mTimestamp = [[NSDate date] timeIntervalSince1970];
+}
+- (void)onFadeTimer:(NSTimer*)timer
+{
+    NSTimeInterval interval = [[NSDate date] timeIntervalSince1970] - mTimestamp;
+    if(interval > mFadeSeconds)
+    {
+        interval = mFadeSeconds;
+        [mFadeTimer invalidate];
+        mFadeTimer = nil;
+    }
+    
+    [self setVolume:(mFadeSVol + (mFadeEVol-mFadeSVol)*((float)interval/mFadeSeconds))];
+}
+
+- (void)setMasterVolume:(float)_volume
+{
+    mMasterVolume = _volume;
+    [self setVolume:volume];
+}
+- (float)getMasterVolume
+{
+    return mMasterVolume;
 }
 
 @end

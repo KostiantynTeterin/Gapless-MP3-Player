@@ -10,7 +10,6 @@
 #import "AudioPlayer.h"
 
 @interface ViewController : UIViewController {
-    AudioSound *mus1, *mus2;
     UIButton IBOutlet *playButton;
     UIButton IBOutlet *pauseButton;
     

@@ -1,9 +1,9 @@
 //
 //  SPGAudioPlayer.h
-//  Fix The Leaks
+//  Gapless-MP3-Player-ARC
 //
-//  Created by Kostya Teterin on 20.05.12.
-//  Copyright (c) 2012 Emotion Rays. All rights reserved.
+//  Created by Kostya Teterin on 8/25/13.
+//  Copyright (c) 2013 Kostya Teterin. All rights reserved.
 //
 
 #import "Sparrow.h"

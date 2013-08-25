@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View ControllerARC-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="ViewControllerARC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyH-RX-fmv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="NPy-H7-wO7"/>
+                                    <constraint firstAttribute="height" constant="36" id="x3p-xe-aVI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play music">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPlayTap:" destination="2" eventType="touchUpInside" id="agq-xl-T6Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgP-bg-Opk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="e1r-Lc-OST"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pause music">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPauseTap:" destination="2" eventType="touchUpInside" id="Zxs-3I-CRZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Track 1 (endless loop)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cvM-9M-PLf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="BVI-Ns-SNQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Track 2 (no loop)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="u1o-6e-0SH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="XLD-aZ-5jH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Track 3 (endless loop)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ieu-tr-74l">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Music from the game Fix The Leaks (c) by Dan Reynolds (www.musicianeer.com)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="HHO-Yi-Mgd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="ajC-8t-TZH"/>
+                                    <constraint firstAttribute="width" constant="280" id="gpU-KK-uBL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This music is not available for use in any free or commercial products." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Wc0-VR-x3Q">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="IvL-gT-ChA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0P-bn-mqd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="Ue5-AK-s94"/>
+                                    <constraint firstAttribute="height" constant="36" id="bYX-Ix-3tL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Break loop">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonBreakLoopTap:" destination="2" eventType="touchUpInside" id="p0c-Pf-UrG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sgP-bg-Opk" firstAttribute="centerX" secondItem="HHO-Yi-Mgd" secondAttribute="centerX" type="default" id="2wg-QL-REi"/>
+                            <constraint firstItem="cvM-9M-PLf" firstAttribute="top" secondItem="5" secondAttribute="top" constant="188" id="93t-7o-9C2"/>
+                            <constraint firstItem="TyH-RX-fmv" firstAttribute="leading" secondItem="sgP-bg-Opk" secondAttribute="leading" type="default" id="CmH-mN-d4g"/>
+                            <constraint firstItem="e0P-bn-mqd" firstAttribute="trailing" secondItem="HHO-Yi-Mgd" secondAttribute="trailing" type="default" id="GoC-3Z-hm0"/>
+                            <constraint firstItem="ieu-tr-74l" firstAttribute="top" secondItem="u1o-6e-0SH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="M4k-5j-kVI"/>
+                            <constraint firstItem="sgP-bg-Opk" firstAttribute="trailing" secondItem="TyH-RX-fmv" secondAttribute="trailing" type="default" id="Mts-7r-IAb"/>
+                            <constraint firstItem="sgP-bg-Opk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="117" id="QD8-eE-tCj"/>
+                            <constraint firstItem="Wc0-VR-x3Q" firstAttribute="leading" secondItem="HHO-Yi-Mgd" secondAttribute="leading" type="default" id="SYC-MH-Wg4"/>
+                            <constraint firstItem="e0P-bn-mqd" firstAttribute="leading" secondItem="u1o-6e-0SH" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="U43-vz-rSF"/>
+                            <constraint firstItem="HHO-Yi-Mgd" firstAttribute="top" secondItem="5" secondAttribute="top" constant="320" id="UEG-Sz-uZj"/>
+                            <constraint firstItem="cvM-9M-PLf" firstAttribute="leading" secondItem="u1o-6e-0SH" secondAttribute="leading" type="default" id="Y3u-Si-vym"/>
+                            <constraint firstItem="ieu-tr-74l" firstAttribute="trailing" secondItem="u1o-6e-0SH" secondAttribute="trailing" type="default" id="cjo-C8-hrR"/>
+                            <constraint firstItem="HHO-Yi-Mgd" firstAttribute="trailing" secondItem="Wc0-VR-x3Q" secondAttribute="trailing" type="default" id="ha6-YF-wDU"/>
+                            <constraint firstItem="TyH-RX-fmv" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="jZe-8l-9W8"/>
+                            <constraint firstItem="Wc0-VR-x3Q" firstAttribute="top" secondItem="5" secondAttribute="top" constant="405" id="k6J-EQ-vho"/>
+                            <constraint firstItem="e0P-bn-mqd" firstAttribute="top" secondItem="5" secondAttribute="top" constant="182" id="ouN-vr-sN1"/>
+                            <constraint firstItem="TyH-RX-fmv" firstAttribute="top" secondItem="5" secondAttribute="top" constant="60" id="vkV-aW-KQT"/>
+                            <constraint firstItem="u1o-6e-0SH" firstAttribute="leading" secondItem="ieu-tr-74l" secondAttribute="leading" type="default" id="xaE-S2-Xrb"/>
+                            <constraint firstItem="u1o-6e-0SH" firstAttribute="top" secondItem="cvM-9M-PLf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="yXh-CV-fsn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBreakLoop" destination="e0P-bn-mqd" id="Iow-0a-zfO"/>
+                        <outlet property="buttonPause" destination="sgP-bg-Opk" id="nnv-eh-Kas"/>
+                        <outlet property="buttonPlay" destination="TyH-RX-fmv" id="P0W-2E-CSS"/>
+                        <outlet property="track1" destination="cvM-9M-PLf" id="Pbs-JQ-BQ7"/>
+                        <outlet property="track2" destination="u1o-6e-0SH" id="0H8-S1-R3g"/>
+                        <outlet property="track3" destination="ieu-tr-74l" id="LkJ-13-8O7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewControllerARC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewControllerARC.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonBreakLoopTap:"/>
+                <relationship kind="action" name="buttonPauseTap:"/>
+                <relationship kind="action" name="buttonPlayTap:"/>
+                <relationship kind="outlet" name="buttonBreakLoop" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonPause" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonPlay" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="track1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="track2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="track3" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

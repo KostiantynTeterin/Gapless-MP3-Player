@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BA9DFC617C90C5C0069A6A8 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA9DFC517C90C5C0069A6A8 /* CoreAudio.framework */; };
+		8BA9DFC817C90C790069A6A8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA9DFC717C90C790069A6A8 /* AudioToolbox.framework */; };
+		8BA9DFCA17C90C7F0069A6A8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA9DFC917C90C7F0069A6A8 /* CoreFoundation.framework */; };
+		8BA9DFCE17C910AC0069A6A8 /* SoundQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9DFCD17C910AC0069A6A8 /* SoundQueue.m */; };
+		8BA9DFD117C9180B0069A6A8 /* AudioSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9DFD017C9180B0069A6A8 /* AudioSound.m */; };
+		8BA9DFD417C9187F0069A6A8 /* AudioPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9DFD317C9187F0069A6A8 /* AudioPlayer.mm */; };
+		8BA9DFD817C95C520069A6A8 /* mus_main_title_01_lp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BA9DFD517C95C520069A6A8 /* mus_main_title_01_lp.mp3 */; };
+		8BA9DFD917C95C520069A6A8 /* mus_main_title_02_nl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BA9DFD617C95C520069A6A8 /* mus_main_title_02_nl.mp3 */; };
+		8BA9DFDA17C95C520069A6A8 /* mus_main_title_03_lp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BA9DFD717C95C520069A6A8 /* mus_main_title_03_lp.mp3 */; };
+		8BA9DFDD17C96ABF0069A6A8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA9DFDC17C96ABF0069A6A8 /* OpenAL.framework */; };
+		8BEB3BAE17C9071900C5CDAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEB3BAD17C9071900C5CDAA /* UIKit.framework */; };
+		8BEB3BB017C9071900C5CDAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEB3BAF17C9071900C5CDAA /* Foundation.framework */; };
+		8BEB3BB217C9071900C5CDAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEB3BB117C9071900C5CDAA /* CoreGraphics.framework */; };
+		8BEB3BB817C9071900C5CDAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB3BB617C9071900C5CDAA /* InfoPlist.strings */; };
+		8BEB3BBA17C9071900C5CDAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB3BB917C9071900C5CDAA /* main.m */; };
+		8BEB3BBE17C9071900C5CDAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB3BBD17C9071900C5CDAA /* AppDelegate.m */; };
+		8BEB3BC017C9071900C5CDAA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB3BBF17C9071900C5CDAA /* Default.png */; };
+		8BEB3BC217C9071900C5CDAA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB3BC117C9071900C5CDAA /* Default@2x.png */; };
+		8BEB3BC417C9071900C5CDAA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB3BC317C9071900C5CDAA /* Default-568h@2x.png */; };
+		8BEB3BC717C9071900C5CDAA /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB3BC517C9071900C5CDAA /* MainStoryboard_iPhone.storyboard */; };
+		8BEB3BCA17C9071900C5CDAA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB3BC817C9071900C5CDAA /* MainStoryboard_iPad.storyboard */; };
+		8BEB3BCD17C9071900C5CDAA /* ViewControllerARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB3BCC17C9071900C5CDAA /* ViewControllerARC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8BA9DFC517C90C5C0069A6A8 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		8BA9DFC717C90C790069A6A8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8BA9DFC917C90C7F0069A6A8 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8BA9DFCB17C90E710069A6A8 /* AudioPlayerUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AudioPlayerUtilities.h; path = AudioPlayer/AudioPlayerUtilities.h; sourceTree = "<group>"; };
+		8BA9DFCC17C910AC0069A6A8 /* SoundQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundQueue.h; path = AudioPlayer/SoundQueue.h; sourceTree = "<group>"; };
+		8BA9DFCD17C910AC0069A6A8 /* SoundQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundQueue.m; path = AudioPlayer/SoundQueue.m; sourceTree = "<group>"; };
+		8BA9DFCF17C9180B0069A6A8 /* AudioSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioSound.h; path = AudioPlayer/AudioSound.h; sourceTree = "<group>"; };
+		8BA9DFD017C9180B0069A6A8 /* AudioSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioSound.m; path = AudioPlayer/AudioSound.m; sourceTree = "<group>"; };
+		8BA9DFD217C9187F0069A6A8 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayer.h; path = AudioPlayer/AudioPlayer.h; sourceTree = "<group>"; };
+		8BA9DFD317C9187F0069A6A8 /* AudioPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AudioPlayer.mm; path = AudioPlayer/AudioPlayer.mm; sourceTree = "<group>"; };
+		8BA9DFD517C95C520069A6A8 /* mus_main_title_01_lp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mus_main_title_01_lp.mp3; path = "Demo music/mus_main_title_01_lp.mp3"; sourceTree = SOURCE_ROOT; };
+		8BA9DFD617C95C520069A6A8 /* mus_main_title_02_nl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mus_main_title_02_nl.mp3; path = "Demo music/mus_main_title_02_nl.mp3"; sourceTree = SOURCE_ROOT; };
+		8BA9DFD717C95C520069A6A8 /* mus_main_title_03_lp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mus_main_title_03_lp.mp3; path = "Demo music/mus_main_title_03_lp.mp3"; sourceTree = SOURCE_ROOT; };
+		8BA9DFDC17C96ABF0069A6A8 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		8BEB3BAA17C9071900C5CDAA /* Gapless-MP3-Player-ARC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gapless-MP3-Player-ARC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BEB3BAD17C9071900C5CDAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8BEB3BAF17C9071900C5CDAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8BEB3BB117C9071900C5CDAA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8BEB3BB517C9071900C5CDAA /* Gapless-MP3-Player-ARC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gapless-MP3-Player-ARC-Info.plist"; sourceTree = "<group>"; };
+		8BEB3BB717C9071900C5CDAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8BEB3BB917C9071900C5CDAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8BEB3BBB17C9071900C5CDAA /* Gapless-MP3-Player-ARC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gapless-MP3-Player-ARC-Prefix.pch"; sourceTree = "<group>"; };
+		8BEB3BBC17C9071900C5CDAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8BEB3BBD17C9071900C5CDAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8BEB3BBF17C9071900C5CDAA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8BEB3BC117C9071900C5CDAA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8BEB3BC317C9071900C5CDAA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8BEB3BC617C9071900C5CDAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		8BEB3BC917C9071900C5CDAA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		8BEB3BCB17C9071900C5CDAA /* ViewControllerARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerARC.h; sourceTree = "<group>"; };
+		8BEB3BCC17C9071900C5CDAA /* ViewControllerARC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerARC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BEB3BA717C9071900C5CDAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA9DFDD17C96ABF0069A6A8 /* OpenAL.framework in Frameworks */,
+				8BA9DFCA17C90C7F0069A6A8 /* CoreFoundation.framework in Frameworks */,
+				8BA9DFC817C90C790069A6A8 /* AudioToolbox.framework in Frameworks */,
+				8BA9DFC617C90C5C0069A6A8 /* CoreAudio.framework in Frameworks */,
+				8BEB3BAE17C9071900C5CDAA /* UIKit.framework in Frameworks */,
+				8BEB3BB017C9071900C5CDAA /* Foundation.framework in Frameworks */,
+				8BEB3BB217C9071900C5CDAA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BA9DFBA17C90A7C0069A6A8 /* Demo music */ = {
+			isa = PBXGroup;
+			children = (
+				8BA9DFD517C95C520069A6A8 /* mus_main_title_01_lp.mp3 */,
+				8BA9DFD617C95C520069A6A8 /* mus_main_title_02_nl.mp3 */,
+				8BA9DFD717C95C520069A6A8 /* mus_main_title_03_lp.mp3 */,
+			);
+			name = "Demo music";
+			sourceTree = "<group>";
+		};
+		8BA9DFBB17C90A890069A6A8 /* Audio player */ = {
+			isa = PBXGroup;
+			children = (
+				8BA9DFCB17C90E710069A6A8 /* AudioPlayerUtilities.h */,
+				8BA9DFCC17C910AC0069A6A8 /* SoundQueue.h */,
+				8BA9DFCD17C910AC0069A6A8 /* SoundQueue.m */,
+				8BA9DFCF17C9180B0069A6A8 /* AudioSound.h */,
+				8BA9DFD017C9180B0069A6A8 /* AudioSound.m */,
+				8BA9DFD217C9187F0069A6A8 /* AudioPlayer.h */,
+				8BA9DFD317C9187F0069A6A8 /* AudioPlayer.mm */,
+			);
+			name = "Audio player";
+			sourceTree = "<group>";
+		};
+		8BEB3BA117C9071900C5CDAA = {
+			isa = PBXGroup;
+			children = (
+				8BEB3BB317C9071900C5CDAA /* Gapless-MP3-Player-ARC */,
+				8BEB3BAC17C9071900C5CDAA /* Frameworks */,
+				8BEB3BAB17C9071900C5CDAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BEB3BAB17C9071900C5CDAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB3BAA17C9071900C5CDAA /* Gapless-MP3-Player-ARC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BEB3BAC17C9071900C5CDAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BA9DFDC17C96ABF0069A6A8 /* OpenAL.framework */,
+				8BA9DFC917C90C7F0069A6A8 /* CoreFoundation.framework */,
+				8BA9DFC717C90C790069A6A8 /* AudioToolbox.framework */,
+				8BA9DFC517C90C5C0069A6A8 /* CoreAudio.framework */,
+				8BEB3BAD17C9071900C5CDAA /* UIKit.framework */,
+				8BEB3BAF17C9071900C5CDAA /* Foundation.framework */,
+				8BEB3BB117C9071900C5CDAA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BEB3BB317C9071900C5CDAA /* Gapless-MP3-Player-ARC */ = {
+			isa = PBXGroup;
+			children = (
+				8BA9DFBA17C90A7C0069A6A8 /* Demo music */,
+				8BA9DFBB17C90A890069A6A8 /* Audio player */,
+				8BEB3BBC17C9071900C5CDAA /* AppDelegate.h */,
+				8BEB3BBD17C9071900C5CDAA /* AppDelegate.m */,
+				8BEB3BC517C9071900C5CDAA /* MainStoryboard_iPhone.storyboard */,
+				8BEB3BC817C9071900C5CDAA /* MainStoryboard_iPad.storyboard */,
+				8BEB3BCB17C9071900C5CDAA /* ViewControllerARC.h */,
+				8BEB3BCC17C9071900C5CDAA /* ViewControllerARC.m */,
+				8BEB3BB417C9071900C5CDAA /* Supporting Files */,
+			);
+			path = "Gapless-MP3-Player-ARC";
+			sourceTree = "<group>";
+		};
+		8BEB3BB417C9071900C5CDAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB3BB517C9071900C5CDAA /* Gapless-MP3-Player-ARC-Info.plist */,
+				8BEB3BB617C9071900C5CDAA /* InfoPlist.strings */,
+				8BEB3BB917C9071900C5CDAA /* main.m */,
+				8BEB3BBB17C9071900C5CDAA /* Gapless-MP3-Player-ARC-Prefix.pch */,
+				8BEB3BBF17C9071900C5CDAA /* Default.png */,
+				8BEB3BC117C9071900C5CDAA /* Default@2x.png */,
+				8BEB3BC317C9071900C5CDAA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BEB3BA917C9071900C5CDAA /* Gapless-MP3-Player-ARC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BEB3BD017C9071900C5CDAA /* Build configuration list for PBXNativeTarget "Gapless-MP3-Player-ARC" */;
+			buildPhases = (
+				8BEB3BA617C9071900C5CDAA /* Sources */,
+				8BEB3BA717C9071900C5CDAA /* Frameworks */,
+				8BEB3BA817C9071900C5CDAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gapless-MP3-Player-ARC";
+			productName = "Gapless-MP3-Player-ARC";
+			productReference = 8BEB3BAA17C9071900C5CDAA /* Gapless-MP3-Player-ARC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BEB3BA217C9071900C5CDAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Kostya Teterin";
+			};
+			buildConfigurationList = 8BEB3BA517C9071900C5CDAA /* Build configuration list for PBXProject "Gapless-MP3-Player-ARC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8BEB3BA117C9071900C5CDAA;
+			productRefGroup = 8BEB3BAB17C9071900C5CDAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BEB3BA917C9071900C5CDAA /* Gapless-MP3-Player-ARC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BEB3BA817C9071900C5CDAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BEB3BB817C9071900C5CDAA /* InfoPlist.strings in Resources */,
+				8BEB3BC017C9071900C5CDAA /* Default.png in Resources */,
+				8BEB3BC217C9071900C5CDAA /* Default@2x.png in Resources */,
+				8BEB3BC417C9071900C5CDAA /* Default-568h@2x.png in Resources */,
+				8BEB3BC717C9071900C5CDAA /* MainStoryboard_iPhone.storyboard in Resources */,
+				8BEB3BCA17C9071900C5CDAA /* MainStoryboard_iPad.storyboard in Resources */,
+				8BA9DFD817C95C520069A6A8 /* mus_main_title_01_lp.mp3 in Resources */,
+				8BA9DFD917C95C520069A6A8 /* mus_main_title_02_nl.mp3 in Resources */,
+				8BA9DFDA17C95C520069A6A8 /* mus_main_title_03_lp.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BEB3BA617C9071900C5CDAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BEB3BBA17C9071900C5CDAA /* main.m in Sources */,
+				8BEB3BBE17C9071900C5CDAA /* AppDelegate.m in Sources */,
+				8BEB3BCD17C9071900C5CDAA /* ViewControllerARC.m in Sources */,
+				8BA9DFCE17C910AC0069A6A8 /* SoundQueue.m in Sources */,
+				8BA9DFD117C9180B0069A6A8 /* AudioSound.m in Sources */,
+				8BA9DFD417C9187F0069A6A8 /* AudioPlayer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8BEB3BB617C9071900C5CDAA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BEB3BB717C9071900C5CDAA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8BEB3BC517C9071900C5CDAA /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BEB3BC617C9071900C5CDAA /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		8BEB3BC817C9071900C5CDAA /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BEB3BC917C9071900C5CDAA /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BEB3BCE17C9071900C5CDAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BEB3BCF17C9071900C5CDAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BEB3BD117C9071900C5CDAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gapless-MP3-Player-ARC/Gapless-MP3-Player-ARC-Prefix.pch";
+				INFOPLIST_FILE = "Gapless-MP3-Player-ARC/Gapless-MP3-Player-ARC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8BEB3BD217C9071900C5CDAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gapless-MP3-Player-ARC/Gapless-MP3-Player-ARC-Prefix.pch";
+				INFOPLIST_FILE = "Gapless-MP3-Player-ARC/Gapless-MP3-Player-ARC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BEB3BA517C9071900C5CDAA /* Build configuration list for PBXProject "Gapless-MP3-Player-ARC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BEB3BCE17C9071900C5CDAA /* Debug */,
+				8BEB3BCF17C9071900C5CDAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BEB3BD017C9071900C5CDAA /* Build configuration list for PBXNativeTarget "Gapless-MP3-Player-ARC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BEB3BD117C9071900C5CDAA /* Debug */,
+				8BEB3BD217C9071900C5CDAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BEB3BA217C9071900C5CDAA /* Project object */;
+}

@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE3759B1565E5720078A53C /* Demo music */,
-				ACE3759515658D910078A53C /* Audio Player */,
+				ACE3759515658D910078A53C /* Audio player */,
 				8B3417C5156563C5003092F2 /* AppDelegate.h */,
 				8B3417C6156563C5003092F2 /* AppDelegate.m */,
 				8B3417C8156563C5003092F2 /* ViewController.h */,
@@ -126,7 +126,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ACE3759515658D910078A53C /* Audio Player */ = {
+		ACE3759515658D910078A53C /* Audio player */ = {
 			isa = PBXGroup;
 			children = (
 				AC65AE161569025B00A4C60A /* SPGAudioPlayer.h */,
@@ -137,7 +137,7 @@
 				ACE3759615658DB90078A53C /* AudioPlayer.h */,
 				ACE3759715658DB90078A53C /* AudioPlayer.mm */,
 			);
-			name = "Audio Player";
+			name = "Audio player";
 			sourceTree = "<group>";
 		};
 		ACE3759B1565E5720078A53C /* Demo music */ = {
@@ -176,7 +176,7 @@
 		8B3417A9156563C5003092F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Emotion Rays Entertainment";
 			};
 			buildConfigurationList = 8B3417AC156563C5003092F2 /* Build configuration list for PBXProject "Gapless-MP3-Player" */;
@@ -255,6 +255,10 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 					armv6,
 				);
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -269,6 +273,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
@@ -283,6 +288,10 @@
 					"$(ARCHS_STANDARD_32_BIT)",
 					armv6,
 				);
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -290,6 +299,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
